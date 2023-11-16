@@ -1,0 +1,30 @@
+<h1>Flaks Website</h1>
+
+<p>My fisrt website</p>
+
+<p>My name is {{ first_name }}</p>
+
+<p>This using safe: {{ stuff|safe }}</p>
+
+<p>This using striptags: {{ stuff|striptags }}</p>
+
+<p>This using title: {{ stuff|title }}</p>
+
+<h3>Favorite Pizza:</h3>
+<!-- {% for topping in favorite_pizza %}
+    {{ topping }}<br/>
+{% endfor %} -->
+
+{% for topping in favorite_pizza %}
+
+    {% if topping == 41 %}
+        {{ topping + 100 }}<br/>
+    {% else %}
+        {{ topping }}<br/>
+    {% endif %}
+
+{% endfor %}
+
+<br/><br/>
+{{ favorite_pizza.0 }}
+{{ favorite_pizza.0|reverse }}
